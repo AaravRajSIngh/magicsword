@@ -1,0 +1,41 @@
+class Solution {
+public:
+    string mergeAlternately(string word1, string word2) {
+        int leni=0;
+        string ans="";
+        if(word1.size()>word2.size())
+        {
+            leni=word2.size();
+            
+        }
+        else
+        {
+            leni=word1.size();
+        }
+        cout<<"size"<<leni;
+        for(int i=0;i<leni;i++)
+        {
+            ans+=word1[i];
+            ans+=word2[i];
+        }
+
+       if(word1.size()>word2.size())
+       {
+        for(int i=leni;i<word1.size();i++)
+        {
+            ans+=word1[i];
+        }
+
+       }else
+       {
+        for(int i=leni;i<word2.size();i++)
+        {
+            ans+=word2[i];
+}
+        
+       }
+
+        return ans;
+
+    }
+};
